@@ -1,8 +1,7 @@
 ---
 
 defaultMessage: >
-  Please consider an alternative to ``.
-
+  Please consider an alternative to `{{match}}`.
   See https://github.com/ietf/terminology for suggestions.
 
 rules:
