@@ -9,6 +9,8 @@ repo:
 ``` shell
 mkdir .github
 git submodule add https://github.com/NTAP/isb-ietf-config.git .github/isb-ietf-config
-ln -s isb-ietf-config/.github/in-solidarity.yml .
+ln -s isb-ietf-config/.github/in-solidarity.yml .github/
+git add .github/in-solidarity.yml
+git commit -m "Add in-solidarity-bot config"
 ```
 
