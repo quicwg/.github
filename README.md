@@ -14,3 +14,6 @@ git add .github/in-solidarity.yml
 git commit -m "Add in-solidarity-bot config"
 ```
 
+You will of course also need to install the
+[in-solidarity-bot](https://github.com/apps/in-solidarity)
+for your repo or organization.
