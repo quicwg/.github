@@ -34,7 +34,8 @@ rules:
   gendered-terms:
     regex:
       - /chair[ _-]*man/gi
-      - /man(kind)?/gi
+      - /mankind/gi
+      - /man[ _-]*month/gi
       - /mans/gi
       - /sales[ _-]*man/gi
       - /man[ _-]*made/gi
