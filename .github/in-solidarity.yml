@@ -8,40 +8,40 @@ defaultMessage: >
 rules:
   whitelist:
     regex:
-      - /\bwhite[ _-]*list\b/gi
+      - /\bwhite[ _-]*list/gi
     level: failure
 
   blacklist:
     regex:
-      - /\bblack[ _-]*list\b/gi
+      - /\bblack[ _-]*list/gi
     level: failure
 
   master:
     regex:
-      - /\bmaster\b/gi
+      - /\bmaster/gi
     level: failure
 
   slave:
     regex:
-      - /\bslave\b/gi
+      - /\bslave/gi
     level: failure
 
   grandfathered:
     regex:
-      - /\bgrandfather(ed|ing)\b/gi
+      - /\bgrandfather(s|ed|ing)\b/gi
     level: failure
 
   gendered-terms:
     regex:
-      - /\bchair[ _-]*man\b/gi
+      - /\bchair[ _-]*man/gi
       - /\bmankind\b/gi
-      - /\bman[ _-]*month\b/gi
+      - /\bman[ _-]*month/gi
       - /\bmans\b/gi
-      - /\bsales[ _-]*man\b/gi
+      - /\bsales[ _-]*m(a|e)n/gi
       - /\bman[ _-]*made\b/gi
-      - /\bman[ _-]*power\b/gi
+      - /\bman[ _-]*power/gi
       - /\bguys?\b/gi
-      - /\blad(y|ies)\b/gi
+      - /\blad(y|ie)\'?s?\'?\b/gi
     level: failure
 
   gendered-pronouns:
@@ -51,22 +51,22 @@ rules:
 
   sanity-check:
     regex:
-      - /\bsanity[ _-]*check\b/gi
+      - /\bsanity[ _-]*check/gi
     level: failure
 
   crazy:
     regex:
-      - /\bcrazy\b/gi
+      - /\bcraz(y|ie)/gi
     level: failure
 
   dummy:
     regex:
-      - /\bdummy\b/gi
+      - /\bdummy/gi
     level: failure
 
   dark-pattern:
     regex:
-      - /\bdark[ _-]*pattern\b/gi
+      - /\bdark[ _-]*pattern/gi
     level: failure
 
   balkanization:
