@@ -3,75 +3,134 @@
 defaultMessage: >
   Please consider an alternative to `{{match}}`.
 
+  Possibilities include: {{#each alternatives}}{{#if @index}}, {{/if}}\`{{this}}\`{{/each}}
+  {{~/if}}
+
   See https://github.com/ietf/terminology for suggestions.
 
 rules:
   whitelist:
     regex:
-      - /\bwhite[ _-]*list/gi
+      - /\bwhite[\w_-]*list/gi
     level: failure
+    alternatives:
+      - accept list
+      - allowlist
+      - approved list
+      - pass list
+      - permitted
 
   blacklist:
     regex:
-      - /\bblack[ _-]*list/gi
+      - /\bblack[\w_-]*list/gi
     level: failure
+    alternatives:
+      - blocklist
+      - denylist
+      - prohibited
+      - refused
+      - reject list
+      - unapproved list
 
   master:
     regex:
       - /\bmaster/gi
     level: failure
+    alternatives:
+      - active
+      - central
+      - initiator
+      - leader
+      - main
+      - orchestrator
+      - parent
+      - primary
+      - server
 
   slave:
     regex:
       - /\bslave/gi
     level: failure
+    alternatives:
+      - follower
+      - peripheral
+      - replica
+      - responder
+      - secondary
+      - standby
+      - worker
 
   grandfathered:
     regex:
       - /\bgrandfather(s|ed|ing)\b/gi
     level: failure
+    alternatives:
+      - legacy status
+      - historical
 
   gendered-terms:
     regex:
-      - /\bchair[ _-]*man/gi
+      - /\bchair[\w_-]*man/gi
       - /\bmankind\b/gi
-      - /\bman[ _-]*month/gi
+      - /\bman[\w_-]*month/gi
       - /\bmans\b/gi
-      - /\bsales[ _-]*m(a|e)n/gi
-      - /\bman[ _-]*made\b/gi
-      - /\bman[ _-]*power/gi
+      - /\bsales[\w_-]*m(a|e)n/gi
+      - /\bman[\w_-]*made\b/gi
+      - /\bman[\w_-]*power/gi
       - /\bguys?\b/gi
       - /\blad(y|ie)\'?s?\'?\b/gi
     level: failure
+    alternatives:
+      - people
 
   gendered-pronouns:
     regex:
       - /\b(he|him|his|she|her|hers)\b/gi
     level: failure
+    alternatives:
+      - they
+      - them
+      - their
 
   sanity-check:
     regex:
-      - /\bsanity[ _-]*check/gi
+      - /\bsanity[\w_-]*check/gi
     level: failure
+    alternatives:
+      - quick check
+      - confidence check
+      - coherence check
 
   crazy:
     regex:
       - /\bcraz(y|ie)/gi
     level: failure
+    alternatives:
+      - unexpected
+      - surprising
+      - puzzling
 
   dummy:
     regex:
       - /\bdummy/gi
     level: failure
+    alternatives:
+      - placeholder
+      - sample
 
   dark-pattern:
     regex:
-      - /\bdark[ _-]*pattern/gi
+      - /\bdark[\w_-]*pattern/gi
     level: failure
+    alternatives:
+      - deception Pattern
 
   balkanization:
     regex:
       - /\bbalkani[zs]\w*\b/gi
     level: failure
+    alternatives:
+      - bifurcation
+      - segmentation
 
 ignoreDefaults: true
