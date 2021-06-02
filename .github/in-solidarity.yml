@@ -125,7 +125,7 @@ rules:
       - /\bdark[\w_-]*pattern/gi
     level: failure
     alternatives:
-      - deception Pattern
+      - deception pattern
 
   balkanization:
     regex:
