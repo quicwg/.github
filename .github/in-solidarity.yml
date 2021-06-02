@@ -3,10 +3,12 @@
 defaultMessage: >
   Please consider an alternative to `{{match}}`.
 
-  Possibilities include: {{#each alternatives}}{{#if @index}}, {{/if}}\`{{this}}\`{{/each}}
+  {{#if alternatives~}}
+  Possibilities include: {{#each alternatives}}{{#if @index}},
+  {{/if}}`{{this}}`{{/each}}
   {{~/if}}
 
-  See https://github.com/ietf/terminology for suggestions.
+  See https://github.com/ietf/terminology for more suggestions.
 
 rules:
   whitelist:
