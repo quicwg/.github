@@ -14,7 +14,7 @@ rules:
   whitelist:
     regex:
       - /\bwhite[\w_-]*list/gi
-    level: failure
+    level: warning
     alternatives:
       - accept list
       - allowlist
@@ -25,7 +25,7 @@ rules:
   blacklist:
     regex:
       - /\bblack[\w_-]*list/gi
-    level: failure
+    level: warning
     alternatives:
       - blocklist
       - denylist
@@ -37,7 +37,7 @@ rules:
   master:
     regex:
       - /\bmaster/gi
-    level: failure
+    level: warning
     alternatives:
       - active
       - central
@@ -52,7 +52,7 @@ rules:
   slave:
     regex:
       - /\bslave/gi
-    level: failure
+    level: warning
     alternatives:
       - follower
       - peripheral
@@ -65,7 +65,7 @@ rules:
   grandfathered:
     regex:
       - /\bgrandfather(s|ed|ing)\b/gi
-    level: failure
+    level: warning
     alternatives:
       - legacy status
       - historical
@@ -81,14 +81,14 @@ rules:
       - /\bman[\w_-]*power/gi
       - /\bguys?\b/gi
       - /\blad(y|ie)\'?s?\'?\b/gi
-    level: failure
+    level: warning
     alternatives:
       - people
 
   gendered-pronouns:
     regex:
       - /\b(he|him|his|she|her|hers)\b/gi
-    level: failure
+    level: warning
     alternatives:
       - they
       - them
@@ -97,7 +97,7 @@ rules:
   sanity-check:
     regex:
       - /\bsanity[\w_-]*check/gi
-    level: failure
+    level: warning
     alternatives:
       - quick check
       - confidence check
@@ -106,7 +106,7 @@ rules:
   crazy:
     regex:
       - /\bcraz(y|ie)/gi
-    level: failure
+    level: warning
     alternatives:
       - unexpected
       - surprising
@@ -115,7 +115,7 @@ rules:
   dummy:
     regex:
       - /\bdummy/gi
-    level: failure
+    level: warning
     alternatives:
       - placeholder
       - sample
@@ -123,14 +123,14 @@ rules:
   dark-pattern:
     regex:
       - /\bdark[\w_-]*pattern/gi
-    level: failure
+    level: warning
     alternatives:
       - deception pattern
 
   balkanization:
     regex:
       - /\bbalkani[zs]\w*\b/gi
-    level: failure
+    level: warning
     alternatives:
       - bifurcation
       - segmentation
