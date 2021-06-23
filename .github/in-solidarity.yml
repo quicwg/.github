@@ -84,10 +84,15 @@ rules:
       - /\bman[\w_-]*made\w*\b/gi
       - /\bman[\w_-]*power\w*\b/gi
       - /\bguys?\b/gi
+      - /\bguys?\b/gi
+      - /\b(wo)?(man|men)\b/gi
+      - /\b(fe)?male\w*\b/gi
       - /\blad(y|ie)\'?s?\'?\b/gi
     level: warning
     alternatives:
+      - individual
       - people
+      - person
 
   gendered-pronouns:
     regex:
