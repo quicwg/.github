@@ -65,11 +65,14 @@ rules:
 
   grandfathered:
     regex:
-      - /\bgrandfather(s|ed|ing)\b/gi
+      - /\bgrandfather/gi
     level: warning
     alternatives:
-      - legacy status
+      - exemption
       - historical
+      - legacy status
+      - pre-approved
+      - special case
 
   gendered-terms:
     regex:
@@ -100,18 +103,19 @@ rules:
       - /\bsanity[\w_-]*check/gi
     level: warning
     alternatives:
-      - quick check
-      - confidence check
       - coherence check
+      - confidence check
+      - quick check
 
   crazy:
     regex:
-      - /\bcraz(y|ie)/gi
+      - /\bcraz(y|ie)?/gi
     level: warning
     alternatives:
-      - unexpected
-      - surprising
+      - malfunctioning
       - puzzling
+      - surprising
+      - unexpected
 
   dummy:
     regex:
@@ -120,6 +124,8 @@ rules:
     alternatives:
       - placeholder
       - sample
+      - stand-in
+      - substitute
 
   dark-pattern:
     regex:
@@ -135,5 +141,119 @@ rules:
     alternatives:
       - bifurcation
       - segmentation
+
+  blackmail:
+    regex:
+      - /\bblack[\w_-]*mail/gi
+    level: warning
+    alternatives:
+      - extortion
+
+  black-sheep:
+    regex:
+      - /\bblack[\w_-]*sheep/gi
+    level: warning
+    alternatives:
+      - disreputable
+
+  black-market:
+    regex:
+      - /\bblack[\w_-]*market/gi
+    level: warning
+    alternatives:
+      - illegal marketplace
+
+  tradition:
+    regex:
+      - /\btradition/gi
+    level: warning
+    alternatives:
+      - classic
+      - classical
+      - common
+      - conventional
+      - customary
+      - fixed
+      - habitual
+      - historic
+      - long-established
+      - popular
+      - prescribed
+      - regular
+      - rooted
+      - time-honored
+      - universal
+      - widely used
+      - widespread
+
+  native:
+    regex:
+      - /\bnative/gi
+    level: warning
+    alternatives:
+      - built-in
+      - fundamental
+      - ingrained
+      - intrinsic
+      - original
+
+  elder:
+    regex:
+      - /\elder/gi
+    level: warning
+    alternatives:
+      - aged
+      - aging
+      - old
+
+  dumb:
+    regex:
+      - /\dumb?/gi
+    level: warning
+    alternatives:
+      - dull
+      - inarticuate
+      - incoherent
+
+  immature:
+    regex:
+      - /\immature/gi
+    level: warning
+    alternatives:
+      - imperfect
+      - premature
+      - underdeveloped
+      - unfinished
+      - unsophisticated
+
+  cripple:
+    regex:
+      - /\crippl/gi
+    level: warning
+    alternatives:
+      - broken
+      - damaged
+      - defective
+      - deformed
+      - impaired
+
+  handicap:
+    regex:
+      - /\handicap/gi
+    level: warning
+    alternatives:
+      - broken
+      - damaged
+      - defective
+      - deformed
+      - impaired
+
+  gendered-connectors:
+    regex:
+      - /\b(fe)?male[\w_-]*(connector|end)/gi
+    level: warning
+    alternatives:
+      - plug
+      - socket
 
 ignoreDefaults: true
