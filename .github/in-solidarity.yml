@@ -14,7 +14,7 @@ defaultMessage: >
 rules:
   whitelist:
     regex:
-      - /\bwhite[\w_-]*list/gi
+      - /\bwhite[\w_-]*list\w*\b/gi
     level: warning
     alternatives:
       - accept list
@@ -25,7 +25,7 @@ rules:
 
   blacklist:
     regex:
-      - /\bblack[\w_-]*list/gi
+      - /\bblack[\w_-]*list\w*\b/gi
     level: warning
     alternatives:
       - blocklist
@@ -37,7 +37,7 @@ rules:
 
   master:
     regex:
-      - /\bmaster/gi
+      - /\bmaster\w*\b/gi
     level: warning
     alternatives:
       - active
@@ -52,7 +52,7 @@ rules:
 
   slave:
     regex:
-      - /\bslave/gi
+      - /\bslave\w*\b/gi
     level: warning
     alternatives:
       - follower
@@ -65,7 +65,7 @@ rules:
 
   grandfathered:
     regex:
-      - /\bgrandfather/gi
+      - /\bgrandfather\w*\b/gi
     level: warning
     alternatives:
       - exemption
@@ -76,13 +76,13 @@ rules:
 
   gendered-terms:
     regex:
-      - /\bchair[\w_-]*man/gi
+      - /\bchair[\w_-]*man\w*\b/gi
       - /\bmankind\b/gi
-      - /\bman[\w_-]*month/gi
+      - /\bman[\w_-]*month\w*\b/gi
       - /\bmans\b/gi
-      - /\bsales[\w_-]*m(a|e)n/gi
-      - /\bman[\w_-]*made\b/gi
-      - /\bman[\w_-]*power/gi
+      - /\bsales[\w_-]*m(a|e)n\w*\b/gi
+      - /\bman[\w_-]*made\w*\b/gi
+      - /\bman[\w_-]*power\w*\b/gi
       - /\bguys?\b/gi
       - /\blad(y|ie)\'?s?\'?\b/gi
     level: warning
@@ -100,7 +100,7 @@ rules:
 
   sanity-check:
     regex:
-      - /\bsanity[\w_-]*check/gi
+      - /\bsanity[\w_-]*check\w*\b/gi
     level: warning
     alternatives:
       - coherence check
@@ -109,7 +109,7 @@ rules:
 
   crazy:
     regex:
-      - /\bcraz(y|ie)?/gi
+      - /\bcraz(y|ie)?\w*\b/gi
     level: warning
     alternatives:
       - malfunctioning
@@ -119,7 +119,7 @@ rules:
 
   dummy:
     regex:
-      - /\bdummy/gi
+      - /\bdummy\w*\b/gi
     level: warning
     alternatives:
       - placeholder
@@ -129,7 +129,7 @@ rules:
 
   dark-pattern:
     regex:
-      - /\bdark[\w_-]*pattern/gi
+      - /\bdark[\w_-]*pattern\w*\b/gi
     level: warning
     alternatives:
       - deception pattern
@@ -144,28 +144,28 @@ rules:
 
   blackmail:
     regex:
-      - /\bblack[\w_-]*mail/gi
+      - /\bblack[\w_-]*mail\w*\b/gi
     level: warning
     alternatives:
       - extortion
 
   black-sheep:
     regex:
-      - /\bblack[\w_-]*sheep/gi
+      - /\bblack[\w_-]*sheep\w*\b/gi
     level: warning
     alternatives:
       - disreputable
 
   black-market:
     regex:
-      - /\bblack[\w_-]*market/gi
+      - /\bblack[\w_-]*market\w*\b/gi
     level: warning
     alternatives:
       - illegal marketplace
 
   tradition:
     regex:
-      - /\btradition/gi
+      - /\btradition\w*\b/gi
     level: warning
     alternatives:
       - classic
@@ -188,7 +188,7 @@ rules:
 
   native:
     regex:
-      - /\bnative/gi
+      - /\bnative\w*\b/gi
     level: warning
     alternatives:
       - built-in
@@ -199,7 +199,7 @@ rules:
 
   elder:
     regex:
-      - /\belder/gi
+      - /\belder\w*\b/gi
     level: warning
     alternatives:
       - aged
@@ -208,7 +208,7 @@ rules:
 
   dumb:
     regex:
-      - /\bdumb?/gi
+      - /\bdumb?\w*\b/gi
     level: warning
     alternatives:
       - dull
@@ -217,7 +217,7 @@ rules:
 
   immature:
     regex:
-      - /\bimmature/gi
+      - /\bimmature\w*\b/gi
     level: warning
     alternatives:
       - imperfect
@@ -228,7 +228,7 @@ rules:
 
   cripple:
     regex:
-      - /\bcrippl/gi
+      - /\bcrippl\w*\b/gi
     level: warning
     alternatives:
       - broken
@@ -239,7 +239,7 @@ rules:
 
   handicap:
     regex:
-      - /\bhandicap/gi
+      - /\bhandicap\w*\b/gi
     level: warning
     alternatives:
       - broken
@@ -250,7 +250,7 @@ rules:
 
   gendered-connectors:
     regex:
-      - /\b(fe)?male[\w_-]*(connector|end)/gi
+      - /\b(fe)?male[\w_-]*(connector|end)\w*\b/gi
     level: warning
     alternatives:
       - plug
