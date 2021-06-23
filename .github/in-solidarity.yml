@@ -199,7 +199,7 @@ rules:
 
   elder:
     regex:
-      - /\elder/gi
+      - /\belder/gi
     level: warning
     alternatives:
       - aged
@@ -208,7 +208,7 @@ rules:
 
   dumb:
     regex:
-      - /\dumb?/gi
+      - /\bdumb?/gi
     level: warning
     alternatives:
       - dull
@@ -217,7 +217,7 @@ rules:
 
   immature:
     regex:
-      - /\immature/gi
+      - /\bimmature/gi
     level: warning
     alternatives:
       - imperfect
@@ -228,7 +228,7 @@ rules:
 
   cripple:
     regex:
-      - /\crippl/gi
+      - /\bcrippl/gi
     level: warning
     alternatives:
       - broken
@@ -239,7 +239,7 @@ rules:
 
   handicap:
     regex:
-      - /\handicap/gi
+      - /\bhandicap/gi
     level: warning
     alternatives:
       - broken
