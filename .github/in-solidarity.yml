@@ -80,14 +80,14 @@ rules:
       - /\bmankind\b/gi
       - /\bman[\w_-]*month\w*\b/gi
       - /\bmans\b/gi
-      - /\bsales[\w_-]*m(a|e)n\w*\b/gi
       - /\bman[\w_-]*made\w*\b/gi
       - /\bman[\w_-]*power\w*\b/gi
       - /\bguys?\b/gi
       - /\bguys?\b/gi
-      - /\b(wo)?(man|men)\b/gi
+      - /\b(wo)?m[ae]n\b/gi
       - /\b(fe)?male\w*\b/gi
       - /\blad(y|ie)\'?s?\'?\b/gi
+      - /\b(\w+m[ae]n(ship)?)\b/gi
     level: warning
     alternatives:
       - individual
