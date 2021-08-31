@@ -17,7 +17,7 @@ In either case, you will of course need to install and enable the
 [in-solidarity-bot](https://github.com/apps/in-solidarity) for your repo or
 organization, so do that first by [clicking "Configure" on this
 page](https://github.com/apps/in-solidarity) and then enabling the bot
-accordingly..
+accordingly.
 
 ### Enabling for a GitHub Organization or User
 
@@ -47,3 +47,12 @@ git commit -m "Add in-solidarity-bot config"
 
 This will create and commit a `.github/in-solidarity.yml` file that uses the
 configuration provided in this repo.
+
+## Suggesting New Terms
+
+[These regular expression-based rules](.github/in-solidarity.yml) control which
+terms will be flagged at which severity level, and also contains lists of
+alternative terms that will be suggested.
+
+Please open a pull request against this file to suggest new terms to be added to
+the configuration.
