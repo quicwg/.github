@@ -29,8 +29,13 @@ account or organization, simply
 2. **rename** the forked repo to `.github`
 
 If you already have a `.github` repo in your organization or user account,
+<!--
 follow the steps in the next section instead, creating a
 `.github/in-solidarity.yml` file in your existing `.github` repo.
+-->
+you need to unfortunately enable the configuration for each repository,
+as described in the next section. (If someone knows a way for enabling this
+per-organization, please contact me!)
 
 ### Enabling for a Single Repository
 
